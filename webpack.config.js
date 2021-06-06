@@ -1,6 +1,6 @@
 const path = require('path');
-const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   output: {
     path: path.join(__dirname, "/dist"),
@@ -10,6 +10,8 @@ module.exports = {
   devServer: {
     port: 3010,
     watchContentBase: true,
+    hot: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
